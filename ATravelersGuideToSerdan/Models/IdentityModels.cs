@@ -18,16 +18,24 @@ namespace ATravelersGuideToSerdan.Models
         }
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class SerdanDb : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
+        public SerdanDb()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
 
-        public static ApplicationDbContext Create()
+        public static SerdanDb Create()
         {
-            return new ApplicationDbContext();
+            return new SerdanDb();
         }
+
+        public DbSet<NPC> NPCs { get; set; }
+        public DbSet<NpcStats> NpcStats { get; set; }
+        public DbSet<Planet> Planets { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Place> Places { get; set; }
+
     }
 }

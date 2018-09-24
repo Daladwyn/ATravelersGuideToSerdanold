@@ -8,6 +8,9 @@ namespace ATravelersGuideToSerdan.Models
 {
     public class NpcStats
     {
+        [Key]
+        public int NpcStatsId { get; set; }
+
         [Required]
         public int NpcId { get; set; }
 
@@ -283,6 +286,119 @@ namespace ATravelersGuideToSerdan.Models
 
         [Range(0, 5)]
         public byte Materian { get; set; }
+
+        public int SummaPoangKrafter { get; set; }
+        //************************************************************
+        [Range(0,3)]
+        public byte DrakeKontakt { get; set; }
+
+        [MaxLength(50)]
+        public string DrakeKontaktVem { get; set; }
+
+        [Range(0,3)]
+        public byte GripKontakt { get; set; }
+
+        [MaxLength(50)]
+        public string GripKontaktVem { get; set; }
+
+        [Range(0,5)]
+        public byte DemonKontakt { get; set; }
+
+        [MaxLength(50)]
+        public string DemonKontaktVem { get; set; }
+
+        [Range(0,5)]
+        public byte AetKontakt { get; set; }
+
+        [MaxLength(50)]
+        public string AetKontaktVem { get; set; }
+
+        [Range(0,4)]
+        public byte SerdanKontakt { get; set; }
+
+        [MaxLength(50)]
+        public string SerdanKontaktVem { get; set; }
+
+        [Range(0, 4)]
+        public byte EdlosiKontakt { get; set; }
+
+        [MaxLength(50)]
+        public string EdlosiKontaktVem { get; set; }
+
+        [Range(0,8)]
+        public int VakandeVan { get; set; }
+
+        [MaxLength(50)]
+        public string VakandeVanVem { get; set; }
+
+        [Range(0,5)]
+        public int BraDaligtBlod { get; set; }
+
+        public int SummaPoangKontakter { get; set; }
+        //************************************************************
+        public bool Visuellt { get; set; }
+
+        public bool Symbol { get; set; }
+
+        public bool Alkemi { get; set; }
+
+        public bool Blod { get; set; }
+
+        public bool Kraft { get; set; }
+
+        public bool Verkligheten { get; set; }
+
+        public bool Draperiet { get; set; }
+
+        public bool Dysterheten { get; set; }
+
+        public bool Etnor { get; set; }
+
+        public bool Drommen { get; set; }
+
+        public bool Slojan { get; set; }
+
+        public bool Parallellium { get; set; }
+
+        public bool ElementaMagi { get; set; }
+
+        public bool Se { get; set; }
+
+        public bool OkaMinska { get; set; }
+
+        public bool Omvandling { get; set; }
+
+        public bool Transformering { get; set; }
+
+        public bool Skapa { get; set; }
+
+        public bool Energi { get; set; }
+
+        public bool Rum { get; set; }
+
+        public bool Materia { get; set; }
+
+        public bool Sinne { get; set; }
+
+        public bool Liv { get; set; }
+
+        public bool Sjal { get; set; }
+
+        public bool Tid { get; set; }
+
+        public int SummaPoangMagi { get; set; }
+        //************************************************************
+        public int TotalaPoang { get; set; }
+
+        public int UtdeladePoang { get; set; }
+
+        public int SparadePoang { get; set; }
+
+        public int KraftPoang { get; set; }
+
+        public int BundnaKraftPoang { get; set; }
+        //************************************************************
+
 
 
 
