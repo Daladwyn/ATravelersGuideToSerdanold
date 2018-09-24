@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "NpcIndex";
+}
+
+<h2>NpcIndex</h2>
+
+<div>
+@Html.ActionLink("Serdan", "GetNpcs", "NPC", new { @type = "Serdan"})
+
+</div>
+<div>
+
+    @Html.ActionLink("Edlosi", "GetNpcs", "NPC", new { @type="Edlosi"})
+
+</div>
+<div>
+    @Html.ActionLink("Andra", "GetNpcs","NPC", new { @type="other"})
+</div>

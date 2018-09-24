@@ -213,6 +213,7 @@
     <Compile Include="Models\Planet.cs" />
     <Compile Include="Models\ViewModels\CityViewModel.cs" />
     <Compile Include="Models\ViewModels\CountryViewModel.cs" />
+    <Compile Include="Models\ViewModels\NPCGenerationViewModel.cs" />
     <Compile Include="Models\ViewModels\NPCStatsViewModel.cs" />
     <Compile Include="Models\ViewModels\PlanetViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -280,10 +281,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\NPC\NpcIndex.cshtml" />
+    <Content Include="Views\NPC\GetNpcs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\NPC\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

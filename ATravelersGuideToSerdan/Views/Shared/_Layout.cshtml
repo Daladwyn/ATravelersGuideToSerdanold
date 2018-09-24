@@ -34,14 +34,14 @@
                                 </div>
                             }*@
 
-                        @Html.ActionLink("Npcs", "Index", "NPC")
+                        @Html.ActionLink("Npcs", "NpcIndex", "NPC")
                     </li>
 
-                    <li>@Html.ActionLink("Planets", "About", "Home")</li>
+                    <li>@Html.ActionLink("Planets", "PlanetIndex", "Planets")</li>
 
-                    <li>@Html.ActionLink("Countries", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Countries", "CountryIndex", "Country")</li>
 
-                    <li>@Html.ActionLink("Cities", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Cities", "CityIndex", "City")</li>
                     <li>
                         <form class="navbar-form navbar-left" action="/action_page.php">
                             <div class="form-group">
@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container body-content" id="Contentbody">
         @RenderBody()
         <hr />
         <footer>
