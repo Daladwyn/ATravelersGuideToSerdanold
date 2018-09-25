@@ -1,4 +1,5 @@
 ﻿using ATravelersGuideToSerdan.Models;
+using ATravelersGuideToSerdan.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace ATravelersGuideToSerdan.Controllers
 
         public ActionResult GetNpcs(string type)
         {
+            ViewBag.Title = type;
             List<NPC> ListOfNPCs = Db.NPCs.ToList();
             List<NPC> RequestedTypeOfNPCs = new List<NPC>();
             foreach (var NPC in ListOfNPCs)
@@ -35,7 +37,16 @@ namespace ATravelersGuideToSerdan.Controllers
             }
             
             
-            return View("GetNpcs", RequestedTypeOfNPCs);
+            return View("_GetNpcList", RequestedTypeOfNPCs);
+
+
+        }
+
+        public ActionResult GetNpc (int Id)
+        {
+            NPCStatsViewModel ASpecificNpcData = new NPCStatsViewModel();
+
+            return PartialView("_SpecificNpc", ASpecificNpcData);
         }
     }
 }

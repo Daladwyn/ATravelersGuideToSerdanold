@@ -14,10 +14,14 @@ namespace ATravelersGuideToSerdan.Models
         [Required]
         public int NpcId { get; set; }
 
+
+        //************************************************************
+        [Display(Name = "Koordination /Motorik")]
         public int KoordinationMotorikTot { get; set; }
 
         public int KoordinationMotorikUts { get; set; }
         //************************************************************
+        [Display(Name = "Vapen")]
         public int WeaponValue { get; set; }
 
         public int WeaponTp { get; set; }
@@ -30,6 +34,7 @@ namespace ATravelersGuideToSerdan.Models
 
         public string WeaponSkills { get; set; }
         //************************************************************
+        [Display(Name = "Skjutvapen")]
         public int BalisticValue { get; set; }
 
         public int BalisticTp { get; set; }
@@ -42,6 +47,7 @@ namespace ATravelersGuideToSerdan.Models
 
         public string BalisticSkills { get; set; }
         //************************************************************
+        [Display(Name = "Finmotorik")]
         public int FineMotorValue { get; set; }
 
         public int FineMotorTp { get; set; }
@@ -59,7 +65,7 @@ namespace ATravelersGuideToSerdan.Models
 
         public int PhysiqueUts { get; set; }
         //************************************************************
-        
+        [Display(Name = "Fysik")]
         public int PhysicsValue { get; set; }
 
         public int PhysicsTp { get; set; }
@@ -72,6 +78,7 @@ namespace ATravelersGuideToSerdan.Models
 
         public string PhysicsSkills { get; set; }
         //************************************************************
+        [Display(Name = "Styrka")]
         public int StrenghtValue { get; set; }
 
         public int StrenghtTp { get; set; }
@@ -84,6 +91,7 @@ namespace ATravelersGuideToSerdan.Models
 
         public string StrenghtSkills { get; set; }
         //************************************************************
+        [Display(Name = "Rörlighet")]
         public int MobilityValue { get; set; }
 
         public int MobilityTp { get; set; }
@@ -100,6 +108,7 @@ namespace ATravelersGuideToSerdan.Models
 
         public int PsykeUts { get; set; }
         //************************************************************
+        [Display(Name = "Vilja")]
         public int WillValue { get; set; }
 
         public int WillTp { get; set; }
@@ -112,6 +121,7 @@ namespace ATravelersGuideToSerdan.Models
 
         public string WillSkills { get; set; }
         //************************************************************
+        [Display(Name = "Kreativitet")]
         public int CreativityValue { get; set; }
 
         public int CreativityTp { get; set; }
@@ -124,6 +134,7 @@ namespace ATravelersGuideToSerdan.Models
 
         public string CreativitySkills { get; set; }
         //************************************************************
+        [Display(Name = "Bildning")]
         public int EducationValue { get; set; }
 
         public int EducationTp { get; set; }
@@ -140,6 +151,7 @@ namespace ATravelersGuideToSerdan.Models
 
         public int PerceptionUts { get; set; }
         //************************************************************
+        [Display(Name = "Intuition")]
         public int IntuitionValue { get; set; }
 
         public int IntuitionTp { get; set; }
@@ -152,6 +164,7 @@ namespace ATravelersGuideToSerdan.Models
 
         public string IntuitionSkills { get; set; }
         //************************************************************
+        [Display(Name = "Magisk syn")]
         public int MagicVisionValue { get; set; }
 
         public int MagicVisionTp { get; set; }
@@ -164,6 +177,7 @@ namespace ATravelersGuideToSerdan.Models
 
         public string MagicVisionSkills { get; set; }
         //************************************************************
+        [Display(Name = "Uppm.")]
         public int AttentionValue { get; set; }
 
         public int AttentionTp { get; set; }
@@ -180,6 +194,7 @@ namespace ATravelersGuideToSerdan.Models
 
         public int SocialUts { get; set; }
         //************************************************************
+        [Display(Name = "Utstrålning")]
         public int CharismaValue { get; set; }
 
         public int CharismaTp { get; set; }
@@ -192,6 +207,7 @@ namespace ATravelersGuideToSerdan.Models
 
         public string CharismaSkills { get; set; }
         //************************************************************
+        [Display(Name = "Insikt")]
         public int InsightValue { get; set; }
 
         public int InsightTp { get; set; }
@@ -204,6 +220,7 @@ namespace ATravelersGuideToSerdan.Models
 
         public string InsightSkills { get; set; }
         //************************************************************
+        [Display(Name = "Motstånd")]
         public int ResistanceValue { get; set; }
 
         public int ResistanceTp { get; set; }
@@ -216,191 +233,252 @@ namespace ATravelersGuideToSerdan.Models
 
         public string ResistanceSkills { get; set; }
         //************************************************************
+        [Display(Name = "Fysisk skada")]
         public int PhysicalDamageMax { get; set; }
 
         public int PhysicalDamage { get; set; }
 
+        [Display(Name = "Själ skada")]
         public int SoulDamageMax { get; set; }
 
         public int SoulDamage { get; set; }
         //************************************************************
-        [Range(0,6)]
-        public byte Draken { get; set; }
+        [Range(0, 6)]
+        [Display(Name = "Draken")]
+        public byte PowerDragon { get; set; }
 
         [Range(0, 6)]
-        public byte Enhorningen { get; set; }
+        [Display(Name = "Enhörningen")]
+        public byte PowerUnicorn { get; set; }
 
         [Range(0, 5)]
-        public byte Lakaren { get; set; }
+        [Display(Name = "Läkaren")]
+        public byte PowerHealer { get; set; }
 
         [Range(0, 6)]
-        public byte Gripen { get; set; }
+        [Display(Name = "Gripen")]
+        public byte PowerGriffon { get; set; }
 
         [Range(0, 6)]
-        public byte Mantikoran { get; set; }
+        [Display(Name = "Manikoran")]
+        public byte PowerManticore { get; set; }
 
         [Range(0, 5)]
-        public byte Kroppen { get; set; }
+        [Display(Name = "Kroppen")]
+        public byte PowerBody { get; set; }
 
         [Range(0, 6)]
-        public byte Symbolen { get; set; }
+        [Display(Name = "Symbolen")]
+        public byte PowerSymbol { get; set; }
 
         [Range(0, 2)]
-        public byte Dorren { get; set; }
+        [Display(Name = "Dörren")]
+        public byte PowerDoor { get; set; }
 
         [Range(0, 1)]
-        public byte Elementa { get; set; }
+        [Display(Name = "Elementa")]
+        public byte PowerElementa { get; set; }
 
         [Range(0, 6)]
-        public byte Sinnets { get; set; }
+        [Display(Name = "Sinnets")]
+        public byte PowerMind { get; set; }
 
         [Range(0, 5)]
-        public byte Naturen { get; set; }
+        [Display(Name = "Naturen")]
+        public byte PowerNature { get; set; }
 
         [Range(0, 2)]
-        public byte Djuret { get; set; }
+        [Display(Name = "Djuret")]
+        public byte PowerAnimal { get; set; }
 
         [Range(0, 5)]
-        public byte Vattnet { get; set; }
+        [Display(Name = "Vattnet")]
+        public byte PowerWater { get; set; }
 
         [Range(0, 5)]
-        public byte Jorden { get; set; }
+        [Display(Name = "Jorden")]
+        public byte PowerEarth { get; set; }
 
         [Range(0, 5)]
-        public byte Ljuset { get; set; }
+        [Display(Name = "Ljuset")]
+        public byte PowerLight { get; set; }
 
         [Range(0, 5)]
-        public byte Elektricitet { get; set; }
+        [Display(Name = "Elektricitet")]
+        public byte PowerElectricity { get; set; }
 
         [Range(0, 5)]
-        public byte Elden { get; set; }
+        [Display(Name = "Elden")]
+        public byte PowerFire { get; set; }
 
         [Range(0, 5)]
-        public byte Vinden { get; set; }
+        [Display(Name = "Vinden")]
+        public byte PowerWind { get; set; }
 
         [Range(0, 5)]
-        public byte Morkret { get; set; }
+        [Display(Name = "Mörkret")]
+        public byte PowerDarkness { get; set; }
 
         [Range(0, 5)]
-        public byte Svardet { get; set; }
+        [Display(Name = "Svärdet")]
+        public byte PowerSword { get; set; }
 
         [Range(0, 5)]
-        public byte Materian { get; set; }
+        [Display(Name = "Materian")]
+        public byte PowerMateria { get; set; }
 
+        [Display(Name = "Poäng utsatta på krafter totalt:")]
         public int SummaPoangKrafter { get; set; }
         //************************************************************
-        [Range(0,3)]
-        public byte DrakeKontakt { get; set; }
+        [Range(0, 3)]
+        [Display(Name = "Drakekontakt 3p")]
+        public byte DragonContact { get; set; }
 
         [MaxLength(50)]
-        public string DrakeKontaktVem { get; set; }
+        public string DragonContactWho { get; set; }
 
-        [Range(0,3)]
-        public byte GripKontakt { get; set; }
-
-        [MaxLength(50)]
-        public string GripKontaktVem { get; set; }
-
-        [Range(0,5)]
-        public byte DemonKontakt { get; set; }
+        [Range(0, 3)]
+        [Display(Name = "Gripkontakt 3p")]
+        public byte GriffonContact { get; set; }
 
         [MaxLength(50)]
-        public string DemonKontaktVem { get; set; }
+        public string GriffonContactWho { get; set; }
 
-        [Range(0,5)]
-        public byte AetKontakt { get; set; }
-
-        [MaxLength(50)]
-        public string AetKontaktVem { get; set; }
-
-        [Range(0,4)]
-        public byte SerdanKontakt { get; set; }
+        [Range(0, 5)]
+        [Display(Name = "Demonkontakt 5p")]
+        public byte DemonContact { get; set; }
 
         [MaxLength(50)]
-        public string SerdanKontaktVem { get; set; }
+        public string DemonContactWho { get; set; }
+
+        [Range(0, 5)]
+        [Display(Name = "Aetkontakt 5p")]
+        public byte AetContact { get; set; }
+
+        [MaxLength(50)]
+        public string AetContactWho { get; set; }
 
         [Range(0, 4)]
-        public byte EdlosiKontakt { get; set; }
+        [Display(Name = "Serdankontakt 4p")]
+        public byte SerdanContact { get; set; }
 
         [MaxLength(50)]
-        public string EdlosiKontaktVem { get; set; }
+        public string SerdanContactWho { get; set; }
 
-        [Range(0,8)]
-        public int VakandeVan { get; set; }
+        [Range(0, 4)]
+        [Display(Name = "Edlosikontakt 4p")]
+        public byte EdlosiContact { get; set; }
 
         [MaxLength(50)]
-        public string VakandeVanVem { get; set; }
+        public string EdlosiContactWho { get; set; }
 
-        [Range(0,5)]
+        [Range(0, 8)]
+        [Display(Name = "Vakande vän 8p")]
+        public int GuardianFriend { get; set; }
+
+        [MaxLength(50)]
+        public string GuardianFriendWho { get; set; }
+
+        [Range(0, 5)]
+        [Display(Name = "Bra/Dåligt blod")]
         public int BraDaligtBlod { get; set; }
 
+        [Display(Name = "Totalt:")]
         public int SummaPoangKontakter { get; set; }
         //************************************************************
-        public bool Visuellt { get; set; }
+        [Display(Name = "Visuelt")]
+        public bool MagiVisuellt { get; set; }
 
-        public bool Symbol { get; set; }
+        [Display(Name = "Symbol")]
+        public bool MagiSymbol { get; set; }
 
-        public bool Alkemi { get; set; }
+        [Display(Name = "Alkemi")]
+        public bool MagiAlkemi { get; set; }
 
-        public bool Blod { get; set; }
+        [Display(Name = "Blod")]
+        public bool MagiBlod { get; set; }
 
-        public bool Kraft { get; set; }
+        [Display(Name = "Kraft")]
+        public bool MagiKraft { get; set; }
 
-        public bool Verkligheten { get; set; }
+        [Display(Name = "Verkligheten")]
+        public bool MagiVerkligheten { get; set; }
 
-        public bool Draperiet { get; set; }
+        [Display(Name = "Draperiet")]
+        public bool MagiDraperiet { get; set; }
 
-        public bool Dysterheten { get; set; }
+        [Display(Name = "Dysterheten")]
+        public bool MagiDysterheten { get; set; }
 
-        public bool Etnor { get; set; }
+        [Display(Name = "Etnor")]
+        public bool MagiEtnor { get; set; }
 
-        public bool Drommen { get; set; }
+        [Display(Name = "Drömmen")]
+        public bool MagiDrommen { get; set; }
 
-        public bool Slojan { get; set; }
+        [Display(Name = "Slöjan")]
+        public bool MagiSlojan { get; set; }
 
-        public bool Parallellium { get; set; }
+        [Display(Name = "Parallellium")]
+        public bool MagiParallellium { get; set; }
 
-        public bool ElementaMagi { get; set; }
+        [Display(Name = "Elementa")]
+        public bool MagiElementa { get; set; }
 
-        public bool Se { get; set; }
+        [Display(Name = "Se")]
+        public bool MagiSe { get; set; }
 
-        public bool OkaMinska { get; set; }
+        [Display(Name = "Öka/minska")]
+        public bool MagiOkaMinska { get; set; }
 
-        public bool Omvandling { get; set; }
+        [Display(Name = "Omvandling")]
+        public bool MagiOmvandling { get; set; }
 
-        public bool Transformering { get; set; }
+        [Display(Name = "Transformering")]
+        public bool MagiTransformering { get; set; }
 
-        public bool Skapa { get; set; }
+        [Display(Name = "Skapa")]
+        public bool MagiSkapa { get; set; }
 
-        public bool Energi { get; set; }
+        [Display(Name = "Energi")]
+        public bool MagiEnergi { get; set; }
 
-        public bool Rum { get; set; }
+        [Display(Name = "Rum")]
+        public bool MagiRum { get; set; }
 
-        public bool Materia { get; set; }
+        [Display(Name = "Materia")]
+        public bool MagiMateria { get; set; }
 
-        public bool Sinne { get; set; }
+        [Display(Name = "Sinne")]
+        public bool MagiSinne { get; set; }
 
-        public bool Liv { get; set; }
+        [Display(Name = "Liv")]
+        public bool MagiLiv { get; set; }
 
-        public bool Sjal { get; set; }
+        [Display(Name = "Själ")]
+        public bool MagiSjal { get; set; }
 
-        public bool Tid { get; set; }
+        [Display(Name = "Tid")]
+        public bool MagiTid { get; set; }
 
+        [Display(Name = "Summa")]
         public int SummaPoangMagi { get; set; }
         //************************************************************
+        [Display(Name = "Totala poäng:")]
         public int TotalaPoang { get; set; }
 
+        [Display(Name = "Utdelade poäng:")]
         public int UtdeladePoang { get; set; }
 
+        [Display(Name = "Sparade poäng:")]
         public int SparadePoang { get; set; }
 
+        [Display(Name = "Kraftpoäng:")]
         public int KraftPoang { get; set; }
 
+        [Display(Name = "Bundna kraftpoäng:")]
         public int BundnaKraftPoang { get; set; }
         //************************************************************
-
-
-
 
 
     }

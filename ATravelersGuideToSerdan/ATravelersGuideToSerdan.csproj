@@ -282,7 +282,9 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\NPC\NpcIndex.cshtml" />
-    <Content Include="Views\NPC\GetNpcs.cshtml" />
+    <Content Include="Views\NPC\_GetNpcList.cshtml" />
+    <Content Include="Views\NPC\_ANpc.cshtml" />
+    <Content Include="Views\NPC\_SpecificNpc.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

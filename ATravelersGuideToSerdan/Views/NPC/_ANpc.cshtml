@@ -1,0 +1,5 @@
+﻿@model ATravelersGuideToSerdan.Models.ViewModels.NPCGenerationViewModel
+
+<li>
+    @Html.ActionLink(Model.NpcName, "GetNpc", "NPC", new { @id = Model.NpcId })
+</li>

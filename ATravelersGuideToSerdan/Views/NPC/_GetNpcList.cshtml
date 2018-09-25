@@ -1,0 +1,14 @@
+﻿@model List<ATravelersGuideToSerdan.Models.ViewModels.NPCGenerationViewModel>
+
+<h2>@ViewBag.Title</h2>
+
+<hr />
+
+<ul>
+    @foreach (var Npc in Model)
+    {
+
+        @Html.Partial("ANpc", Npc)
+    }
+</ul>
+}

@@ -1,0 +1,21 @@
+﻿@model ATravelersGuideToSerdan.Models.ViewModels.NPCStatsViewModel
+
+<h2>@Model.NpcName</h2>
+<hr />
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-4">
+        @Html.LabelFor(n => Model.NpcEvenKnownAs) @Model.NpcEvenKnownAs
+    </div>
+    <div class="col-md-5"></div>
+</div>
+
+@Model.NpcAlias
+
+@Model.NpcDescriptivePhrase
+
+@Model.NpcLooks
+
+@Model.NpcDescription
+
+@Model.NpcCurrentResidence
