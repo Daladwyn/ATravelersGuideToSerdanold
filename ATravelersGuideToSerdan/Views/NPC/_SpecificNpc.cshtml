@@ -1,4 +1,4 @@
-﻿@model ATravelersGuideToSerdan.Models.ViewModels.NPCStatsViewModel
+﻿@model ATravelersGuideToSerdan.Models.ViewModels.NpcGeneralViewModel
 
 <h2>@Model.NpcName</h2>
 <hr />
@@ -9,13 +9,132 @@
     </div>
     <div class="col-md-5"></div>
 </div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-4">
+        @Html.LabelFor(n => Model.NpcAlias) @Model.NpcAlias
+    </div>
+    <div class="col-md-5"></div>
+</div>
 
-@Model.NpcAlias
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-4">
+        @Html.LabelFor(n => Model.NpcDescriptivePhrase) @Model.NpcDescriptivePhrase
+    </div>
+    <div class="col-md-5"></div>
+</div>
 
-@Model.NpcDescriptivePhrase
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-4">
+        @Html.LabelFor(n => Model.NpcLooks) @Model.NpcLooks
+    </div>
+    <div class="col-md-5"></div>
+</div>
 
-@Model.NpcLooks
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-4">
+        @Html.LabelFor(n => Model.NpcDescription) @Model.NpcDescription
+    </div>
+    <div class="col-md-5"></div>
+</div>
 
-@Model.NpcDescription
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-4">
+        @Html.LabelFor(n => Model.NpcCurrentResidence) @Model.NpcCurrentResidence
+    </div>
+    <div class="col-md-5"></div>
+</div>
 
-@Model.NpcCurrentResidence
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-4">
+        @Html.LabelFor(n=>Model.NpcFamily) @Model.NpcFamily
+    </div>
+    <div class="col-md-5"></div>
+</div>
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-4">
+        @Html.LabelFor(n=>Model.NpcArchetyp) @Model.NpcArchetyp
+    </div>
+    <div class="col-md-5"></div>
+</div>
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-4">
+        @Html.LabelFor(n=>Model.NpcKilledBy) @Model.NpcKilledBy
+    </div>
+    <div class="col-md-5"></div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-2">
+        @using (Ajax.BeginForm("GetStats", "NPC", new AjaxOptions
+        {
+            UpdateTargetId = "NpcDetails",
+            InsertionMode = InsertionMode.Replace
+        }))
+        {
+            <input type="submit" value="Stats" />
+            @Html.HiddenFor(n => Model.NpcId)
+        }
+    </div>
+    <div class="col-md-2">
+        @using (Ajax.BeginForm("GetApperance", "NPC", new AjaxOptions
+        {
+            UpdateTargetId = "NpcDetails",
+            InsertionMode = InsertionMode.Replace
+        }))
+        {
+            <input type="submit" value="Uppträdande" />
+            @Html.HiddenFor(n => Model.NpcId)
+        }
+    </div>
+    <div class="col-md-2">
+        @using (Ajax.BeginForm("GetRelatives", "NPC", new AjaxOptions
+        {
+            UpdateTargetId = "NpcDetails",
+            InsertionMode = InsertionMode.Replace
+        }))
+        {
+            <input type="submit" value="Släktingar" />
+            @Html.HiddenFor(n => Model.NpcId)
+        }
+    </div>
+    <div class="col-md-2">
+        @using (Ajax.BeginForm("GetOthers", "NPC", new AjaxOptions
+        {
+            UpdateTargetId = "NpcDetails",
+            InsertionMode = InsertionMode.Replace
+        }))
+        {
+            <input type="submit" value="Andra" />
+            @Html.HiddenFor(n => Model.NpcId)
+        }
+    </div>
+    <div class="col-md-2">
+        @using (Ajax.BeginForm("GetDiverse", "NPC", new AjaxOptions
+        {
+            UpdateTargetId = "NpcDetails",
+            InsertionMode = InsertionMode.Replace
+        }))
+        {
+            <input type="submit" value="Övrigt" />
+            @Html.HiddenFor(n => Model.NpcId)
+        }
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+<hr />
+
+<div id="NpcDetails"></div>
+
+

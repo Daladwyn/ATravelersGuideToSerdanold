@@ -44,7 +44,7 @@ namespace ATravelersGuideToSerdan.Controllers
 
         public ActionResult GetNpc (int Id)
         {
-            NPCStatsViewModel ASpecificNpcData = new NPCStatsViewModel();
+            NPCCompleteStatsViewModel ASpecificNpcData = new NPCCompleteStatsViewModel();
 
             return PartialView("_SpecificNpc", ASpecificNpcData);
         }
