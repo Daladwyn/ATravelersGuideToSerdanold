@@ -49,9 +49,15 @@ namespace ATravelersGuideToSerdan.Controllers
             return PartialView("_SpecificNpc", ASpecificNpcData);
         }
 
+        [HttpGet]
         public ActionResult GetStats(int Id)
         {
-            NpcStatsViewModel NpcStats = new NpcStatsViewModel();
+            NpcStat NpcToFetch = Db.NpcStats.SingleOrDefault(i => i.NpcId == Id);
+            if (NpcToFetch == null)
+            {
+                return PartialView("_GetApperance");
+            }
+            NpcStatsViewModel NpcStats = NpcStatsViewModel.AssignStatsData(NpcToFetch); ;
 
             return PartialView("_GetStats", NpcStats);
         }
