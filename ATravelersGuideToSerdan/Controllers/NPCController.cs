@@ -56,9 +56,15 @@ namespace ATravelersGuideToSerdan.Controllers
             return PartialView("_GetStats", NpcStats);
         }
 
+        [HttpGet]
         public ActionResult GetApperance(int Id)
         {
-            NpcApperanceViewModel NpcApperance = new NpcApperanceViewModel();
+            NPC NpcToFetch = Db.NPCs.SingleOrDefault(i => i.NpcId == Id);
+            if (NpcToFetch == null)
+            {
+                return PartialView("_GetApperance");
+            }
+            NpcApperanceViewModel NpcApperance = NpcApperanceViewModel.AssignApperanceData(NpcToFetch);
             return PartialView("_GetApperance", NpcApperance);
         }
 
@@ -85,13 +91,13 @@ namespace ATravelersGuideToSerdan.Controllers
             NpcOthersViewModel NpcOthers = NpcOthersViewModel.AssignOthersData(NpcToFetch);
             return PartialView("_GetOthers", NpcOthers);
         }
-
+        [HttpGet]
         public ActionResult GetDiverse(int Id)
         {
             NPC NpcToFetch = Db.NPCs.SingleOrDefault(i => i.NpcId == Id);
             if (NpcToFetch == null)
             {
-                return PartialView("_GetOthers");
+                return PartialView("_GetDiverse");
             }
             NpcDiverseViewModel NpcDiverse = NpcDiverseViewModel.AssignDiverseData(NpcToFetch);
             return PartialView("_GetDiverse", NpcDiverse);

@@ -27,5 +27,17 @@ namespace ATravelersGuideToSerdan.Models.ViewModels
         [MaxLength(200)]
         public string NpcInBattle { get; set; }
 
+        internal static NpcApperanceViewModel AssignApperanceData(NPC NpcToAssign)
+        {
+            NpcApperanceViewModel FilteredNpc = new NpcApperanceViewModel
+            {
+                NpcId = NpcToAssign.NpcId,
+                NpcAsAParent = NpcToAssign.NpcAsAParent,
+                NpcBehaviour = NpcToAssign.NpcBehaviour,
+                NpcGoal = NpcToAssign.NpcGoal,
+                NpcInBattle = NpcToAssign.NpcInBattle
+            };
+            return FilteredNpc;
+        }
     }
 }
