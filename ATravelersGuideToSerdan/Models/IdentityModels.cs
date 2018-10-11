@@ -31,7 +31,7 @@ namespace ATravelersGuideToSerdan.Models
         }
 
         public DbSet<NPC> NPCs { get; set; }
-        public DbSet<NpcStats> NpcStats { get; set; }
+        public DbSet<NpcStat> NpcStats { get; set; }
         public DbSet<Planet> Planets { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<City> Cities { get; set; }

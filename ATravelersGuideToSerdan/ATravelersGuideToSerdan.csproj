@@ -208,7 +208,9 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\NPC.cs" />
-    <Compile Include="Models\NpcStats.cs" />
+    <Compile Include="Models\NpcMagic.cs" />
+    <Compile Include="Models\NpcPower.cs" />
+    <Compile Include="Models\NpcStat.cs" />
     <Compile Include="Models\Place.cs" />
     <Compile Include="Models\Planet.cs" />
     <Compile Include="Models\ViewModels\CityViewModel.cs" />
