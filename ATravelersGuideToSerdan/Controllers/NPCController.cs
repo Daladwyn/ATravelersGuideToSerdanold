@@ -88,7 +88,12 @@ namespace ATravelersGuideToSerdan.Controllers
 
         public ActionResult GetDiverse(int Id)
         {
-            NpcDiverseViewModel NpcDiverse = new NpcDiverseViewModel();
+            NPC NpcToFetch = Db.NPCs.SingleOrDefault(i => i.NpcId == Id);
+            if (NpcToFetch == null)
+            {
+                return PartialView("_GetOthers");
+            }
+            NpcDiverseViewModel NpcDiverse = NpcDiverseViewModel.AssignDiverseData(NpcToFetch);
             return PartialView("_GetDiverse", NpcDiverse);
         }
     }

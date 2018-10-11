@@ -26,5 +26,18 @@ namespace ATravelersGuideToSerdan.Models.ViewModels
         [Display(Name = "Tillgångar")]
         [MaxLength(200)]
         public string NpcAssets { get; set; }
+
+        internal static NpcDiverseViewModel AssignDiverseData(NPC NpcToAssign)
+        {
+            NpcDiverseViewModel FilteredNpc = new NpcDiverseViewModel
+            {
+                NpcId = NpcToAssign.NpcId,
+                NpcOtherResideces = NpcToAssign.NpcOtherResideces,
+                NpcInTheHistory = NpcToAssign.NpcInTheHistory,
+                NpcSecrets = NpcToAssign.NpcSecrets,
+                NpcAssets = NpcToAssign.NpcAssets
+            };
+            return FilteredNpc;
+        }
     }
 }
