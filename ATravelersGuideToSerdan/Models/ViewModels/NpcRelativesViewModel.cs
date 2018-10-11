@@ -22,6 +22,20 @@ namespace ATravelersGuideToSerdan.Models.ViewModels
 
         [Display(Name = "Vanliga Barn")]
         public List<int> NpcsRegularChildren { get; set; }
-    }
 
+
+        internal static NpcRelativesViewModel AssignRelativesData(NPC NpcToAssign)
+        {
+            NpcRelativesViewModel FilteredNpc = new NpcRelativesViewModel
+            {
+                NpcId = NpcToAssign.NpcId,
+                NpcsFather = NpcToAssign.NpcsFather,
+                NpcsMother = NpcToAssign.NpcsMother,
+                NpcsRegularChildren = NpcToAssign.NpcsRegularChildren,
+                NpcsSerdanEdlosiChildren = NpcToAssign.NpcsSerdanEdlosiChildren,
+
+            };
+            return FilteredNpc;
+        }
+    }
 }

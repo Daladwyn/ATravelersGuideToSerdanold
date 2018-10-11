@@ -62,6 +62,7 @@ namespace ATravelersGuideToSerdan.Controllers
             return PartialView("_GetApperance", NpcApperance);
         }
 
+        [HttpGet]
         public ActionResult GetRelatives(int Id)
         {
             NPC NpcToFetch = Db.NPCs.SingleOrDefault(i => i.NpcId == Id);
@@ -69,15 +70,11 @@ namespace ATravelersGuideToSerdan.Controllers
             {
                 return PartialView("_GetRelatives");
             }
-            NpcRelativesViewModel NpcRelatives = new NpcRelativesViewModel();
-            NpcRelatives.NpcId = NpcToFetch.NpcId;
-            NpcRelatives.NpcsFather = NpcToFetch.NpcsFather;
-            NpcRelatives.NpcsMother = NpcToFetch.NpcsMother;
-            NpcRelatives.NpcsRegularChildren = NpcToFetch.NpcsRegularChildren;
-            NpcRelatives.NpcsSerdanEdlosiChildren = NpcToFetch.NpcsSerdanEdlosiChildren;
+            NpcRelativesViewModel NpcRelatives = NpcRelativesViewModel.AssignRelativesData(NpcToFetch);
             return PartialView("_GetRelatives", NpcRelatives);
         }
 
+        [HttpGet]
         public ActionResult GetOthers(int Id)
         {
             NPC NpcToFetch = Db.NPCs.SingleOrDefault(i => i.NpcId == Id);
@@ -85,17 +82,7 @@ namespace ATravelersGuideToSerdan.Controllers
             {
                 return PartialView("_GetOthers");
             }
-            NpcOthersViewModel NpcOthers = new NpcOthersViewModel();
-            NpcOthers.NpcId = NpcToFetch.NpcId;
-            NpcOthers.NpcAllies = NpcToFetch.NpcAllies;
-            NpcOthers.NpcEnemies = NpcToFetch.NpcEnemies;
-            NpcOthers.NpcFriends = NpcToFetch.NpcFriends;
-            NpcOthers.NpcRegardingAets = NpcToFetch.NpcRegardingAets;
-            NpcOthers.NpcRegardingDemons = NpcToFetch.NpcRegardingDemons;
-            NpcOthers.NpcRegardingDragons = NpcToFetch.NpcRegardingDragons;
-            NpcOthers.NpcRegardingGrips = NpcToFetch.NpcRegardingGrips;
-            NpcOthers.NpcRegardingOthers = NpcToFetch.NpcRegardingOthers;
-            NpcOthers.NpcRivals = NpcToFetch.NpcRivals;
+            NpcOthersViewModel NpcOthers = NpcOthersViewModel.AssignOthersData(NpcToFetch);
             return PartialView("_GetOthers", NpcOthers);
         }
 
