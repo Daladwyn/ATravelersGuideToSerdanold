@@ -1,0 +1,329 @@
+﻿@model ATravelersGuideToSerdan.Models.ViewModels.NpcStatsViewModel
+
+<div class="container-fluid">
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-3">Egenskap</div>
+            <div class="col-md-2">Tot. - Uts.</div>
+            <div class="col-md-3">Förmåga</div>
+            <div class="col-md-2">Värde</div>
+            <div class="col-md-2">Tp.</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">@Html.LabelFor(i => i.KoordinationMotorikTot)</div>
+            <div class="col-md-2">@Model.KoordinationMotorikTot - @Model.KoordinationMotorikUts</div>
+            <div class="col-md-3">
+                <div class="row">
+                    @Html.LabelFor(i => i.WeaponValue)
+                </div>
+                <div class="row">
+                    @Html.LabelFor(i => i.BalisticValue)
+                </div>
+                <div class="row">
+                    @Html.LabelFor(i => i.FineMotorValue)
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="row">
+                    @Model.WeaponValue
+                </div>
+                <div class="row">
+                    @Model.BalisticValue
+                </div>
+                <div class="row">
+                    @Model.FineMotorValue
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="row">
+                    @Model.WeaponTp
+                </div>
+                <div class="row">
+                    @Model.BalisticTp
+                </div>
+                <div class="row">
+                    @Model.FineMotorTp
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">@Html.LabelFor(i => i.PhysiqueTot)</div>
+            <div class="col-md-2">@Model.PhysiqueTot - @Model.PhysiqueUts</div>
+            <div class="col-md-3">
+                <div class="row">
+                    @Html.LabelFor(i => i.PhysicsValue)
+                </div>
+                <div class="row">
+                    @Html.LabelFor(i => i.StrenghtValue)
+                </div>
+                <div class="row">
+                    @Html.LabelFor(i => i.MobilityValue)
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="row">
+                    @Model.PhysicsValue
+                </div>
+                <div class="row">
+                    @Model.StrenghtValue
+                </div>
+                <div class="row">
+                    @Model.MobilityValue
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="row">
+                    @Model.PhysicsTp
+                </div>
+                <div class="row">
+                    @Model.StrenghtTp
+                </div>
+                <div class="row">
+                    @Model.MobilityTp
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">@Html.LabelFor(i => i.PsykeTot)</div>
+            <div class="col-md-2">@Model.PsykeTot - @Model.PsykeUts</div>
+            <div class="col-md-3">
+                <div class="row">
+                    @Html.LabelFor(i => i.WillValue)
+                </div>
+                <div class="row">
+                    @Html.LabelFor(i => i.CreativityValue)
+                </div>
+                <div class="row">
+                    @Html.LabelFor(i => i.EducationValue)
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="row">
+                    @Model.WillValue
+                </div>
+                <div class="row">
+                    @Model.CreativityValue
+                </div>
+                <div class="row">
+                    @Model.EducationValue
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="row">
+                    @Model.WillTp
+                </div>
+                <div class="row">
+                    @Model.CreativityTp
+                </div>
+                <div class="row">
+                    @Model.EducationTp
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">@Html.LabelFor(i => i.PerceptionTot)</div>
+            <div class="col-md-2">@Model.PerceptionTot - @Model.PerceptionUts</div>
+            <div class="col-md-3">
+                <div class="row">
+                    @Html.LabelFor(i => i.IntuitionValue)
+                </div>
+                <div class="row">
+                    @Html.LabelFor(i => i.MagicVisionValue)
+                </div>
+                <div class="row">
+                    @Html.LabelFor(i => i.AttentionValue)
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="row">
+                    @Model.IntuitionValue
+                </div>
+                <div class="row">
+                    @Model.MagicVisionValue
+                </div>
+                <div class="row">
+                    @Model.AttentionValue
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="row">
+                    @Model.IntuitionTp
+                </div>
+                <div class="row">
+                    @Model.MagicVisionTp
+                </div>
+                <div class="row">
+                    @Model.AttentionTp
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">@Html.LabelFor(i => i.SocialTot)</div>
+            <div class="col-md-2">@Model.SocialTot - @Model.SocialUts</div>
+            <div class="col-md-3">
+                <div class="row">
+                    @Html.LabelFor(i => i.CharismaValue)
+                </div>
+                <div class="row">
+                    @Html.LabelFor(i => i.InsightValue)
+                </div>
+                <div class="row">
+                    @Html.LabelFor(i => i.ResistanceValue)
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="row">
+                    @Model.CharismaValue
+                </div>
+                <div class="row">
+                    @Model.InsightValue
+                </div>
+                <div class="row">
+                    @Model.ResistanceValue
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="row">
+                    @Model.CharismaTp
+                </div>
+                <div class="row">
+                    @Model.InsightTp
+                </div>
+                <div class="row">
+                    @Model.ResistanceTp
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-2">@Model.WeaponExp</div>
+            <div class="col-md-10">@Model.WeaponTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.BalisticExp</div>
+            <div class="col-md-10">@Model.BalisticTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.FineMotorExp</div>
+            <div class="col-md-10">@Model.FineMotorTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.PhysicsExp</div>
+            <div class="col-md-10">@Model.PhysicsTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.StrenghtExp</div>
+            <div class="col-md-10">@Model.StrenghtTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.MobilityExp</div>
+            <div class="col-md-10">@Model.MobilityTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.WillExp</div>
+            <div class="col-md-10">@Model.WillTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.CreativityExp</div>
+            <div class="col-md-10">@Model.CreativityTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.EducationExp</div>
+            <div class="col-md-10">@Model.EducationTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.IntuitionExp</div>
+            <div class="col-md-10">@Model.IntuitionTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.MagicVisionExp</div>
+            <div class="col-md-10">@Model.MagicVisionTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.AttentionExp</div>
+            <div class="col-md-10">@Model.AttentionTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.CharismaExp</div>
+            <div class="col-md-10">@Model.CharismaTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.InsightExp</div>
+            <div class="col-md-10">@Model.InsightTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.ResistanceExp</div>
+            <div class="col-md-10">@Model.ResistanceTalang</div>
+        </div>
+    </div>
+
+
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-2">@Model.WeaponExp</div>
+            <div class="col-md-10">@Model.WeaponTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.BalisticExp</div>
+            <div class="col-md-10">@Model.BalisticTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.FineMotorExp</div>
+            <div class="col-md-10">@Model.FineMotorTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.PhysicsExp</div>
+            <div class="col-md-10">@Model.PhysicsTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.StrenghtExp</div>
+            <div class="col-md-10">@Model.StrenghtTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.MobilityExp</div>
+            <div class="col-md-10">@Model.MobilityTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.WillExp</div>
+            <div class="col-md-10">@Model.WillTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.CreativityExp</div>
+            <div class="col-md-10">@Model.CreativityTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.EducationExp</div>
+            <div class="col-md-10">@Model.EducationTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.IntuitionExp</div>
+            <div class="col-md-10">@Model.IntuitionTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.MagicVisionExp</div>
+            <div class="col-md-10">@Model.MagicVisionTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.ResistanceExp</div>
+            <div class="col-md-10">@Model.ResistanceTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.ResistanceExp</div>
+            <div class="col-md-10">@Model.ResistanceTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.ResistanceExp</div>
+            <div class="col-md-10">@Model.ResistanceTalang</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">@Model.ResistanceExp</div>
+            <div class="col-md-10">@Model.ResistanceTalang</div>
+        </div>
+    </div>
+</div>
+
+
+
+
