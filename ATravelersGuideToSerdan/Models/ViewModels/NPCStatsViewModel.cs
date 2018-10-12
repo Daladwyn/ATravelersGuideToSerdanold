@@ -238,226 +238,11 @@ namespace ATravelersGuideToSerdan.Models.ViewModels
 
         public int SoulDamage { get; set; }
         //************************************************************
-        [Range(0, 6)]
-        [Display(Name = "Draken")]
-        public byte PowerDragon { get; set; }
-
-        [Range(0, 6)]
-        [Display(Name = "Enhörningen")]
-        public byte PowerUnicorn { get; set; }
-
-        [Range(0, 5)]
-        [Display(Name = "Läkaren")]
-        public byte PowerHealer { get; set; }
-
-        [Range(0, 6)]
-        [Display(Name = "Gripen")]
-        public byte PowerGriffon { get; set; }
-
-        [Range(0, 6)]
-        [Display(Name = "Manikoran")]
-        public byte PowerManticore { get; set; }
-
-        [Range(0, 5)]
-        [Display(Name = "Kroppen")]
-        public byte PowerBody { get; set; }
-
-        [Range(0, 6)]
-        [Display(Name = "Symbolen")]
-        public byte PowerSymbol { get; set; }
-
-        [Range(0, 2)]
-        [Display(Name = "Dörren")]
-        public byte PowerDoor { get; set; }
-
-        [Range(0, 1)]
-        [Display(Name = "Elementa")]
-        public byte PowerElementa { get; set; }
-
-        [Range(0, 6)]
-        [Display(Name = "Sinnets")]
-        public byte PowerMind { get; set; }
-
-        [Range(0, 5)]
-        [Display(Name = "Naturen")]
-        public byte PowerNature { get; set; }
-
-        [Range(0, 2)]
-        [Display(Name = "Djuret")]
-        public byte PowerAnimal { get; set; }
-
-        [Range(0, 5)]
-        [Display(Name = "Vattnet")]
-        public byte PowerWater { get; set; }
-
-        [Range(0, 5)]
-        [Display(Name = "Jorden")]
-        public byte PowerEarth { get; set; }
-
-        [Range(0, 5)]
-        [Display(Name = "Ljuset")]
-        public byte PowerLight { get; set; }
-
-        [Range(0, 5)]
-        [Display(Name = "Elektricitet")]
-        public byte PowerElectricity { get; set; }
-
-        [Range(0, 5)]
-        [Display(Name = "Elden")]
-        public byte PowerFire { get; set; }
-
-        [Range(0, 5)]
-        [Display(Name = "Vinden")]
-        public byte PowerWind { get; set; }
-
-        [Range(0, 5)]
-        [Display(Name = "Mörkret")]
-        public byte PowerDarkness { get; set; }
-
-        [Range(0, 5)]
-        [Display(Name = "Svärdet")]
-        public byte PowerSword { get; set; }
-
-        [Range(0, 5)]
-        [Display(Name = "Materian")]
-        public byte PowerMateria { get; set; }
-
-        [Display(Name = "Poäng utsatta på krafter totalt:")]
-        public int SummaPoangKrafter { get; set; }
+        
         //************************************************************
-        [Range(0, 3)]
-        [Display(Name = "Drakekontakt 3p")]
-        public byte DragonContact { get; set; }
-
-        [MaxLength(50)]
-        public string DragonContactWho { get; set; }
-
-        [Range(0, 3)]
-        [Display(Name = "Gripkontakt 3p")]
-        public byte GriffonContact { get; set; }
-
-        [MaxLength(50)]
-        public string GriffonContactWho { get; set; }
-
-        [Range(0, 5)]
-        [Display(Name = "Demonkontakt 5p")]
-        public byte DemonContact { get; set; }
-
-        [MaxLength(50)]
-        public string DemonContactWho { get; set; }
-
-        [Range(0, 5)]
-        [Display(Name = "Aetkontakt 5p")]
-        public byte AetContact { get; set; }
-
-        [MaxLength(50)]
-        public string AetContactWho { get; set; }
-
-        [Range(0, 4)]
-        [Display(Name = "Serdankontakt 4p")]
-        public byte SerdanContact { get; set; }
-
-        [MaxLength(50)]
-        public string SerdanContactWho { get; set; }
-
-        [Range(0, 4)]
-        [Display(Name = "Edlosikontakt 4p")]
-        public byte EdlosiContact { get; set; }
-
-        [MaxLength(50)]
-        public string EdlosiContactWho { get; set; }
-
-        [Range(0, 8)]
-        [Display(Name = "Vakande vän 8p")]
-        public int GuardianFriend { get; set; }
-
-        [MaxLength(50)]
-        public string GuardianFriendWho { get; set; }
-
-        [Range(0, 5)]
-        [Display(Name = "Bra/Dåligt blod")]
-        public int BraDaligtBlod { get; set; }
-
-        [Display(Name = "Totalt:")]
-        public int SummaPoangKontakter { get; set; }
+       
         //************************************************************
-        [Display(Name = "Visuelt")]
-        public bool MagiVisuellt { get; set; }
-
-        [Display(Name = "Symbol")]
-        public bool MagiSymbol { get; set; }
-
-        [Display(Name = "Alkemi")]
-        public bool MagiAlkemi { get; set; }
-
-        [Display(Name = "Blod")]
-        public bool MagiBlod { get; set; }
-
-        [Display(Name = "Kraft")]
-        public bool MagiKraft { get; set; }
-
-        [Display(Name = "Verkligheten")]
-        public bool MagiVerkligheten { get; set; }
-
-        [Display(Name = "Draperiet")]
-        public bool MagiDraperiet { get; set; }
-
-        [Display(Name = "Dysterheten")]
-        public bool MagiDysterheten { get; set; }
-
-        [Display(Name = "Etnor")]
-        public bool MagiEtnor { get; set; }
-
-        [Display(Name = "Drömmen")]
-        public bool MagiDrommen { get; set; }
-
-        [Display(Name = "Slöjan")]
-        public bool MagiSlojan { get; set; }
-
-        [Display(Name = "Parallellium")]
-        public bool MagiParallellium { get; set; }
-
-        [Display(Name = "Elementa")]
-        public bool MagiElementa { get; set; }
-
-        [Display(Name = "Se")]
-        public bool MagiSe { get; set; }
-
-        [Display(Name = "Öka/minska")]
-        public bool MagiOkaMinska { get; set; }
-
-        [Display(Name = "Omvandling")]
-        public bool MagiOmvandling { get; set; }
-
-        [Display(Name = "Transformering")]
-        public bool MagiTransformering { get; set; }
-
-        [Display(Name = "Skapa")]
-        public bool MagiSkapa { get; set; }
-
-        [Display(Name = "Energi")]
-        public bool MagiEnergi { get; set; }
-
-        [Display(Name = "Rum")]
-        public bool MagiRum { get; set; }
-
-        [Display(Name = "Materia")]
-        public bool MagiMateria { get; set; }
-
-        [Display(Name = "Sinne")]
-        public bool MagiSinne { get; set; }
-
-        [Display(Name = "Liv")]
-        public bool MagiLiv { get; set; }
-
-        [Display(Name = "Själ")]
-        public bool MagiSjal { get; set; }
-
-        [Display(Name = "Tid")]
-        public bool MagiTid { get; set; }
-
-        [Display(Name = "Summa")]
-        public int SummaPoangMagi { get; set; }
+        
         //************************************************************
         [Display(Name = "Totala poäng:")]
         public int TotalaPoang { get; set; }
@@ -559,7 +344,36 @@ namespace ATravelersGuideToSerdan.Models.ViewModels
                 AttentionTalang = NpcToAssign.AttentionTalang,
                 AttentionTp = NpcToAssign.AttentionTp,
                 AttentionTTp = NpcToAssign.AttentionTTp,
-                AttentionValue = NpcToAssign.AttentionValue
+                AttentionValue = NpcToAssign.AttentionValue,
+                SocialTot = NpcToAssign.SocialTot,
+                SocialUts = NpcToAssign.SocialUts,
+                CharismaExp = NpcToAssign.CharismaExp,
+                CharismaSkills = NpcToAssign.CharismaSkills,
+                CharismaTalang = NpcToAssign.CharismaTalang,
+                CharismaTp = NpcToAssign.CharismaTp,
+                CharismaTTp = NpcToAssign.CharismaTTp,
+                CharismaValue = NpcToAssign.CharismaValue,
+                InsightExp = NpcToAssign.InsightExp,
+                InsightSkills = NpcToAssign.InsightSkills,
+                InsightTalang = NpcToAssign.InsightTalang,
+                InsightTp = NpcToAssign.InsightTp,
+                InsightTTp = NpcToAssign.InsightTTp,
+                InsightValue = NpcToAssign.InsightValue,
+                ResistanceExp = NpcToAssign.ResistanceExp,
+                ResistanceSkills = NpcToAssign.ResistanceSkills,
+                ResistanceTalang = NpcToAssign.ResistanceTalang,
+                ResistanceTp = NpcToAssign.ResistanceTp,
+                ResistanceTTp = NpcToAssign.ResistanceTTp,
+                ResistanceValue = NpcToAssign.ResistanceValue,
+                PhysicalDamage = NpcToAssign.PhysicalDamage,
+                PhysicalDamageMax = NpcToAssign.PhysicalDamageMax,
+                SoulDamage = NpcToAssign.SoulDamage,
+                SoulDamageMax = NpcToAssign.SoulDamageMax,
+                TotalaPoang = NpcToAssign.TotalaPoang,
+                UtdeladePoang = NpcToAssign.UtdeladePoang,
+                SparadePoang = NpcToAssign.SparadePoang,
+                KraftPoang = NpcToAssign.KraftPoang,
+                BundnaKraftPoang = NpcToAssign.BundnaKraftPoang
             };
             return FilteredNpc;
         }

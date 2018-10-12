@@ -216,6 +216,7 @@
     <Compile Include="Models\ViewModels\CityViewModel.cs" />
     <Compile Include="Models\ViewModels\CountryViewModel.cs" />
     <Compile Include="Models\ViewModels\NpcApperanceViewModel.cs" />
+    <Compile Include="Models\ViewModels\NpcContact.cs" />
     <Compile Include="Models\ViewModels\NpcDiverseViewModel.cs" />
     <Compile Include="Models\ViewModels\NpcGeneralViewModel.cs" />
     <Compile Include="Models\ViewModels\NPCGenerationViewModel.cs" />
