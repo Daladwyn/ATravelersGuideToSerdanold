@@ -1,5 +1,4 @@
-﻿@model List<ATravelersGuideToSerdan.Models.ViewModels.NPCGenerationViewModel>
-
+﻿@model List<ATravelersGuideToSerdan.Models.ViewModels.NpcGeneralViewModel>
 <h2>@ViewBag.Title</h2>
 
 <hr />
@@ -8,7 +7,7 @@
     @foreach (var Npc in Model)
     {
 
-        @Html.Partial("ANpc", Npc)
+        @Html.Partial("_ANpc", Npc)
     }
 </ul>
 }

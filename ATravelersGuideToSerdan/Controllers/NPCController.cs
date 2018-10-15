@@ -23,29 +23,49 @@ namespace ATravelersGuideToSerdan.Controllers
             return View();
         }
 
-        public ActionResult GetNpcs(string type)
+        public ActionResult GetNpcs(string race)
         {
-            ViewBag.Title = type;
+            ViewBag.Title = race;
             List<NPC> ListOfNPCs = Db.NPCs.ToList();
             List<NPC> RequestedTypeOfNPCs = new List<NPC>();
+            List<NpcGeneralViewModel> ConvertedNpcData = new List<NpcGeneralViewModel>();
+            NpcGeneralViewModel aConvertedNpc = new NpcGeneralViewModel();
             foreach (var NPC in ListOfNPCs)
             {
-                if (NPC.NpcFamily == type)
+                if (NPC.NpcRace == race)
                 {
                     RequestedTypeOfNPCs.Add(NPC);
                 }
             }
+            foreach (var NPC in RequestedTypeOfNPCs)
+            {
+                aConvertedNpc.NpcId = NPC.NpcId;
+                aConvertedNpc.NpcName = NPC.NpcName;
+                ConvertedNpcData.Add(aConvertedNpc);
+            }
 
-
-            return View("_GetNpcList", RequestedTypeOfNPCs);
+            return View("_GetNpcList", ConvertedNpcData);
 
 
         }
 
         public ActionResult GetNpc(int Id)
         {
-            NPCCompleteStatsViewModel ASpecificNpcData = new NPCCompleteStatsViewModel();
-
+            NPC selectedNpc = Db.NPCs.SingleOrDefault(i => i.NpcId == Id);
+            NpcGeneralViewModel ASpecificNpcData = new NpcGeneralViewModel
+            {
+                NpcId = selectedNpc.NpcId,
+                NpcName = selectedNpc.NpcName,
+                NpcEvenKnownAs = selectedNpc.NpcEvenKnownAs,
+                NpcAlias = selectedNpc.NpcAlias,
+                NpcDescriptivePhrase = selectedNpc.NpcDescriptivePhrase,
+                NpcArchetyp = selectedNpc.NpcArchetyp,
+                NpcCurrentResidence = selectedNpc.NpcCurrentResidence,
+                NpcDescription = selectedNpc.NpcDescription,
+                NpcFamily = selectedNpc.NpcFamily,
+                NpcKilledBy = selectedNpc.NpcKilledBy,
+                NpcLooks = selectedNpc.NpcLooks
+            };
             return PartialView("_SpecificNpc", ASpecificNpcData);
         }
 

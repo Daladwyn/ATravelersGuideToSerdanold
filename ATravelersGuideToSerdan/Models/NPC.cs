@@ -39,6 +39,14 @@ namespace ATravelersGuideToSerdan.Models
         [MaxLength(40)]
         public string NpcCurrentResidence { get; set; }
 
+        [Display(Name ="Ras")]
+        [MaxLength(20)]
+        public string NpcRace { get; set; }
+
+        public bool NpcIsAPlayer { get; set; }
+
+
+
         [Display(Name = "Familj/Hus")]
         [MaxLength(40)]
         public string NpcFamily { get; set; }
