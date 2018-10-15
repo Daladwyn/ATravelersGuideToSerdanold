@@ -49,7 +49,7 @@ namespace ATravelersGuideToSerdan.Controllers
 
         }
 
-        public ActionResult GetNpc(int Id)
+        public ActionResult GetNpc([Bind(Include= "Id")]int Id)
         {
             NPC selectedNpc = Db.NPCs.SingleOrDefault(i => i.NpcId == Id);
             NpcGeneralViewModel ASpecificNpcData = new NpcGeneralViewModel
@@ -69,21 +69,21 @@ namespace ATravelersGuideToSerdan.Controllers
             return PartialView("_SpecificNpc", ASpecificNpcData);
         }
 
-        [HttpGet]
-        public ActionResult GetStats(int Id)
+        [HttpPost]
+        public ActionResult GetStats([Bind(Include = "Id")]int Id)
         {
             NpcStat NpcToFetch = Db.NpcStats.SingleOrDefault(i => i.NpcId == Id);
             if (NpcToFetch == null)
             {
-                return PartialView("_GetApperance");
+                return PartialView("_GetStats");
             }
             NpcStatsViewModel NpcStats = NpcStatsViewModel.AssignStatsData(NpcToFetch); ;
 
             return PartialView("_GetStats", NpcStats);
         }
 
-        [HttpGet]
-        public ActionResult GetApperance(int Id)
+        [HttpPost]
+        public ActionResult GetApperance([Bind(Include = "Id")]int Id)
         {
             NPC NpcToFetch = Db.NPCs.SingleOrDefault(i => i.NpcId == Id);
             if (NpcToFetch == null)
@@ -94,8 +94,8 @@ namespace ATravelersGuideToSerdan.Controllers
             return PartialView("_GetApperance", NpcApperance);
         }
 
-        [HttpGet]
-        public ActionResult GetRelatives(int Id)
+        [HttpPost]
+        public ActionResult GetRelatives([Bind(Include = "Id")]int Id)
         {
             NPC NpcToFetch = Db.NPCs.SingleOrDefault(i => i.NpcId == Id);
             if (NpcToFetch == null)
@@ -106,8 +106,8 @@ namespace ATravelersGuideToSerdan.Controllers
             return PartialView("_GetRelatives", NpcRelatives);
         }
 
-        [HttpGet]
-        public ActionResult GetOthers(int Id)
+        [HttpPost]
+        public ActionResult GetOthers([Bind(Include = "Id")]int Id)
         {
             NPC NpcToFetch = Db.NPCs.SingleOrDefault(i => i.NpcId == Id);
             if (NpcToFetch == null)
@@ -117,8 +117,8 @@ namespace ATravelersGuideToSerdan.Controllers
             NpcOthersViewModel NpcOthers = NpcOthersViewModel.AssignOthersData(NpcToFetch);
             return PartialView("_GetOthers", NpcOthers);
         }
-        [HttpGet]
-        public ActionResult GetDiverse(int Id)
+        [HttpPost]
+        public ActionResult GetDiverse([Bind(Include = "Id")]int Id)
         {
             NPC NpcToFetch = Db.NPCs.SingleOrDefault(i => i.NpcId == Id);
             if (NpcToFetch == null)

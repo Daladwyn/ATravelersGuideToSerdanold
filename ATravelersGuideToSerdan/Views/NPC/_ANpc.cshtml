@@ -1,5 +1,6 @@
 ﻿@model ATravelersGuideToSerdan.Models.ViewModels.NpcGeneralViewModel
 
 <li>
-    @Html.ActionLink(Model.NpcName, "GetNpc", "NPC", new { @id = Model.NpcId })
+    @Ajax.ActionLink(Model.NpcName, "GetNpc", "NPC", new { id = Model.NpcId },
+    new AjaxOptions { UpdateTargetId="ContentBody", InsertionMode=InsertionMode.Replace})
 </li>
