@@ -6,18 +6,22 @@
 <h2>NpcIndex</h2>
 
 <div>
-@Html.ActionLink("Serdan", "GetNpcs", "NPC", new { @type = "Serdan"})
+    @Ajax.ActionLink("Serdan", "GetNpcs", "NPC", new { race = "Serdan" },
+    new AjaxOptions{UpdateTargetId = "Contentbody",InsertionMode = InsertionMode.Replace})
 
 </div>
 <div>
 
-    @Html.ActionLink("Edlosi", "GetNpcs", "NPC", new { @type="Edlosi"})
+    @Ajax.ActionLink("Edlosi", "GetNpcs", "NPC", new { race = "Edlosi" }, 
+    new AjaxOptions { UpdateTargetId="ContentBody",InsertionMode=InsertionMode.Replace})
 
 </div>
 <div>
-    @Html.ActionLink("Andra", "GetNpcs","NPC", new { @type="other"})
+    @Ajax.ActionLink("Andra", "GetNpcs", "NPC", new { race = "other" },
+    new AjaxOptions {UpdateTargetId="ContentBody",InsertionMode=InsertionMode.Replace })
 </div>
 
 <div>
-    @Html.ActionLink("Spelare", "GetNpcs", "NPC", new { @type = "player" })
+    @Ajax.ActionLink("Spelare", "GetNpcs", "NPC", new { race = "player" },
+    new AjaxOptions { UpdateTargetId="ContentBody",InsertionMode=InsertionMode.Replace})
 </div>

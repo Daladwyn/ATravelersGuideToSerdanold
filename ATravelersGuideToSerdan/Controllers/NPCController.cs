@@ -23,7 +23,7 @@ namespace ATravelersGuideToSerdan.Controllers
             return View();
         }
 
-        public ActionResult GetNpcs(string race)
+        public ActionResult GetNpcs([Bind(Include = "race")]string race)
         {
             ViewBag.Title = race;
             List<NPC> ListOfNPCs = Db.NPCs.ToList();
