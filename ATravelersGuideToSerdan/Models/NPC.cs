@@ -56,8 +56,7 @@ namespace ATravelersGuideToSerdan.Models
 
         [Display(Name = "Dödad av")]
         public int NpcKilledBy { get; set; }
-
-
+        
         [Display(Name = "Uppträdande")]
         [MaxLength(200)]
         public string NpcBehaviour { get; set; }
