@@ -1,5 +1,7 @@
 ﻿@model ATravelersGuideToSerdan.Models.ViewModels.NpcGeneralViewModel
-
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 <h2>@Model.NpcName</h2>
 <hr />
 <div class="container-fluid">
@@ -75,9 +77,9 @@
     </div>
     <hr />
     <ul class="nav navbar-nav">
-        
+
         <li>
-            @using (Ajax.BeginForm("GetStats", "NPC", new { id = Model.NpcId },new AjaxOptions
+            @using (Ajax.BeginForm("GetStats", "NPC", new { id = Model.NpcId }, new AjaxOptions
             {
                 UpdateTargetId = "NpcDetails",
                 InsertionMode = InsertionMode.Replace
@@ -131,7 +133,7 @@
                 @Html.HiddenFor(n => Model.NpcId)
             }
         </li>
-        
+
     </ul>
 
     <hr />
