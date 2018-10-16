@@ -82,7 +82,7 @@
             @using (Ajax.BeginForm("GetStats", "NPC", new { id = Model.NpcId }, new AjaxOptions
             {
                 UpdateTargetId = "NpcDetails",
-                InsertionMode = InsertionMode.InsertBefore
+                InsertionMode = InsertionMode.InsertAfter
             }))
             {
                 <input type="submit" value="Stats" />
@@ -93,7 +93,7 @@
             @using (Ajax.BeginForm("GetApperance", "NPC", new { id = Model.NpcId }, new AjaxOptions
             {
                 UpdateTargetId = "NpcDetails",
-                InsertionMode = InsertionMode.InsertBefore
+                InsertionMode = InsertionMode.InsertAfter
             }))
             {
                 <input type="submit" value="Uppträdande" />
