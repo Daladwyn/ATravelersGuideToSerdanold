@@ -75,6 +75,7 @@ namespace ATravelersGuideToSerdan.Controllers
             NpcStat NpcToFetch = Db.NpcStats.SingleOrDefault(i => i.NpcId == Id);
             if (NpcToFetch == null)
             {
+                ViewBag.ErrorMessage = "No Npc was fetched.";
                 return PartialView("_GetStats");
             }
             NpcStatsViewModel NpcStats = NpcStatsViewModel.AssignStatsData(NpcToFetch); ;
@@ -88,6 +89,7 @@ namespace ATravelersGuideToSerdan.Controllers
             NPC NpcToFetch = Db.NPCs.SingleOrDefault(i => i.NpcId == Id);
             if (NpcToFetch == null)
             {
+                ViewBag.ErrorMessage = "No Npc was fetched.";
                 return PartialView("_GetApperance");
             }
             NpcApperanceViewModel NpcApperance = NpcApperanceViewModel.AssignApperanceData(NpcToFetch);

@@ -10,6 +10,7 @@ namespace ATravelersGuideToSerdan.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Title = "A Travellers Guide To Serdan.";
             return View();
         }
 

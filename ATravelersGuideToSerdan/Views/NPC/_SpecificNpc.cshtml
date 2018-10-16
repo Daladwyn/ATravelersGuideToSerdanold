@@ -82,29 +82,28 @@
             @using (Ajax.BeginForm("GetStats", "NPC", new { id = Model.NpcId }, new AjaxOptions
             {
                 UpdateTargetId = "NpcDetails",
-                InsertionMode = InsertionMode.Replace
+                InsertionMode = InsertionMode.InsertBefore
             }))
             {
                 <input type="submit" value="Stats" />
-                @Html.HiddenFor(n => Model.NpcId)
+
             }
         </li>
         <li>
-            @using (Ajax.BeginForm("GetApperance", "NPC", new AjaxOptions
+            @using (Ajax.BeginForm("GetApperance", "NPC", new { id = Model.NpcId }, new AjaxOptions
             {
                 UpdateTargetId = "NpcDetails",
-                InsertionMode = InsertionMode.Replace
+                InsertionMode = InsertionMode.InsertBefore
             }))
             {
                 <input type="submit" value="Uppträdande" />
-                @Html.HiddenFor(n => Model.NpcId)
             }
         </li>
         <li>
             @using (Ajax.BeginForm("GetRelatives", "NPC", new AjaxOptions
             {
                 UpdateTargetId = "NpcDetails",
-                InsertionMode = InsertionMode.Replace
+                InsertionMode = InsertionMode.InsertBefore
             }))
             {
                 <input type="submit" value="Släktingar" />
@@ -115,7 +114,7 @@
             @using (Ajax.BeginForm("GetOthers", "NPC", new AjaxOptions
             {
                 UpdateTargetId = "NpcDetails",
-                InsertionMode = InsertionMode.Replace
+                InsertionMode = InsertionMode.InsertBefore
             }))
             {
                 <input type="submit" value="Andra" />
@@ -126,7 +125,7 @@
             @using (Ajax.BeginForm("GetDiverse", "NPC", new AjaxOptions
             {
                 UpdateTargetId = "NpcDetails",
-                InsertionMode = InsertionMode.Replace
+                InsertionMode = InsertionMode.InsertBefore
             }))
             {
                 <input type="submit" value="Övrigt" />
