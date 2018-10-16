@@ -99,6 +99,7 @@ namespace ATravelersGuideToSerdan.Models.ViewModels
 
         public string MobilitySkills { get; set; }
         //************************************************************
+        [Display(Name ="Psyke")]
         public int PsykeTot { get; set; }
 
         public int PsykeUts { get; set; }
@@ -142,6 +143,7 @@ namespace ATravelersGuideToSerdan.Models.ViewModels
 
         public string EducationSkills { get; set; }
         //************************************************************
+        [Display(Name ="Perception")]
         public int PerceptionTot { get; set; }
 
         public int PerceptionUts { get; set; }
@@ -185,6 +187,7 @@ namespace ATravelersGuideToSerdan.Models.ViewModels
 
         public string AttentionSkills { get; set; }
         //************************************************************
+        [Display(Name ="Sociala")]
         public int SocialTot { get; set; }
 
         public int SocialUts { get; set; }
