@@ -44,7 +44,7 @@ namespace ATravelersGuideToSerdan.Controllers
                 ConvertedNpcData.Add(aConvertedNpc);
             }
 
-            return View("_GetNpcList", ConvertedNpcData);
+            return PartialView("_GetNpcList", ConvertedNpcData);
 
 
         }

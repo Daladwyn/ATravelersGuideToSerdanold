@@ -1,7 +1,7 @@
 ﻿@model ATravelersGuideToSerdan.Models.ViewModels.NpcGeneralViewModel
-@{
+@*@{
     Layout = "~/Views/Shared/_Layout.cshtml";
-}
+}*@
 <h2>@Model.NpcName</h2>
 <hr />
 <div class="container-fluid">
@@ -79,10 +79,10 @@
     <ul class="nav navbar-nav">
 
         <li>
-            @using (Ajax.BeginForm("GetStats", "NPC", new { id = Model.NpcId }, new AjaxOptions
+            @using (Ajax.BeginForm("GetStats", "NPC", new { Id = Model.NpcId }, new AjaxOptions
             {
                 UpdateTargetId = "NpcDetails",
-                InsertionMode = InsertionMode.InsertAfter
+                InsertionMode = InsertionMode.Replace
             }))
             {
                 <input type="submit" value="Stats" />
@@ -90,37 +90,37 @@
             }
         </li>
         <li>
-            @using (Ajax.BeginForm("GetApperance", "NPC", new { id = Model.NpcId }, new AjaxOptions
+            @using (Ajax.BeginForm("GetApperance", "NPC", new { Id = Model.NpcId }, new AjaxOptions
             {
                 UpdateTargetId = "NpcDetails",
-                InsertionMode = InsertionMode.InsertAfter
+                InsertionMode = InsertionMode.Replace
             }))
             {
                 <input type="submit" value="Uppträdande" />
             }
         </li>
         <li>
-            @using (Ajax.BeginForm("GetRelatives", "NPC", new { id = Model.NpcId }, new AjaxOptions
+            @using (Ajax.BeginForm("GetRelatives", "NPC", new { Id = Model.NpcId }, new AjaxOptions
             {
                 UpdateTargetId = "NpcDetails",
-                InsertionMode = InsertionMode.InsertBefore
+                InsertionMode = InsertionMode.Replace
             }))
             {
                 <input type="submit" value="Släktingar" />
             }
         </li>
         <li>
-            @using (Ajax.BeginForm("GetOthers", "NPC", new { id = Model.NpcId }, new AjaxOptions
+            @using (Ajax.BeginForm("GetOthers", "NPC", new { Id = Model.NpcId }, new AjaxOptions
             {
                 UpdateTargetId = "NpcDetails",
-                InsertionMode = InsertionMode.InsertBefore
+                InsertionMode = InsertionMode.Replace
             }))
             {
                 <input type="submit" value="Andra" />
             }
         </li>
         <li>
-            @using (Ajax.BeginForm("GetDiverse", "NPC", new { id = Model.NpcId }, new AjaxOptions
+            @using (Ajax.BeginForm("GetDiverse", "NPC", new { Id = Model.NpcId }, new AjaxOptions
             {
                 UpdateTargetId = "NpcDetails",
                 InsertionMode = InsertionMode.InsertBefore
@@ -131,6 +131,8 @@
         </li>
 
     </ul>
+    <p>here comes the stats</p>
     <div id="NpcDetails"></div>
+
 </div>
 
