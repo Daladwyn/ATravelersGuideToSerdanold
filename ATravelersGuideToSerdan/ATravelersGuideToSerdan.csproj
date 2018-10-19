@@ -298,7 +298,6 @@
     <Content Include="Views\NPC\_SpecificNpc.cshtml" />
     <Content Include="Views\NPC\_GetStats.cshtml" />
     <Content Include="Views\NPC\_GetApperance.cshtml" />
-    <Content Include="Views\NPC\_GetCombinedStats.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
