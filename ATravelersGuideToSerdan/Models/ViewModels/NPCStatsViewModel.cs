@@ -6,7 +6,7 @@ using System.Web;
 
 namespace ATravelersGuideToSerdan.Models.ViewModels
 {
-    public class NpcStatsViewModel
+    public class NpcStatsViewModel 
     {
         [Required]
         public int NpcId { get; set; }
@@ -99,7 +99,7 @@ namespace ATravelersGuideToSerdan.Models.ViewModels
 
         public string MobilitySkills { get; set; }
         //************************************************************
-        [Display(Name ="Psyke")]
+        [Display(Name = "Psyke")]
         public int PsykeTot { get; set; }
 
         public int PsykeUts { get; set; }
@@ -143,7 +143,7 @@ namespace ATravelersGuideToSerdan.Models.ViewModels
 
         public string EducationSkills { get; set; }
         //************************************************************
-        [Display(Name ="Perception")]
+        [Display(Name = "Perception")]
         public int PerceptionTot { get; set; }
 
         public int PerceptionUts { get; set; }
@@ -187,7 +187,7 @@ namespace ATravelersGuideToSerdan.Models.ViewModels
 
         public string AttentionSkills { get; set; }
         //************************************************************
-        [Display(Name ="Sociala")]
+        [Display(Name = "Sociala")]
         public int SocialTot { get; set; }
 
         public int SocialUts { get; set; }
@@ -241,11 +241,11 @@ namespace ATravelersGuideToSerdan.Models.ViewModels
 
         public int SoulDamage { get; set; }
         //************************************************************
-        
+
         //************************************************************
-       
+
         //************************************************************
-        
+
         //************************************************************
         [Display(Name = "Totala poäng:")]
         public int TotalaPoang { get; set; }

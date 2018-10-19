@@ -1,0 +1,9 @@
+﻿@model ATravelersGuideToSerdan.Models.ViewModels.NpcStatsViewModel
+
+@if (Model!=null)
+{
+@Html.RenderAction("GetNpc","NPC", new { id= Model.NpcId})
+@Html.RenderPartial("_GetStats", Model)
+
+}
+
