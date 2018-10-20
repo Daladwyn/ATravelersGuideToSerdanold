@@ -221,6 +221,7 @@
     <Compile Include="Models\ViewModels\NpcGeneralViewModel.cs" />
     <Compile Include="Models\ViewModels\NPCGenerationViewModel.cs" />
     <Compile Include="Models\ViewModels\NPCCompleteStatsViewModel.cs" />
+    <Compile Include="Models\ViewModels\NpcListViewModel.cs" />
     <Compile Include="Models\ViewModels\NpcOthersViewModel.cs" />
     <Compile Include="Models\ViewModels\NpcRelativesViewModel.cs" />
     <Compile Include="Models\ViewModels\NpcStatsViewModel.cs" />
@@ -298,6 +299,7 @@
     <Content Include="Views\NPC\_SpecificNpc.cshtml" />
     <Content Include="Views\NPC\_GetStats.cshtml" />
     <Content Include="Views\NPC\_GetApperance.cshtml" />
+    <Content Include="Views\NPC\_GetRelatives.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
