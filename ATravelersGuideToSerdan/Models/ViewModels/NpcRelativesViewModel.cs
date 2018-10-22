@@ -15,8 +15,12 @@ namespace ATravelersGuideToSerdan.Models.ViewModels
         [Display(Name = "Mor")]
         public string NpcsMother { get; set; }
 
+        public int NpcsMotherId { get; set; }
+
         [Display(Name = "Far")]
         public string NpcsFather { get; set; }
+
+        public int NpcsFatherId { get; set; }
 
         [Display(Name = "Serdan/Edlosi barn")]
         public List<NpcListViewModel> NpcsSerdanEdlosiChildren { get; set; }
@@ -34,7 +38,9 @@ namespace ATravelersGuideToSerdan.Models.ViewModels
             {
                 NpcId = NpcToAssign.NpcId,
                 NpcsFather = NpcFather == null ? "Okänd." : NpcFather.NpcName,
+                NpcsFatherId= NpcFather == null ? 0 : NpcFather.NpcId,
                 NpcsMother = NpcMother == null ? "Okänd." : NpcMother.NpcName,
+                NpcsMotherId = NpcMother == null ? 0: NpcMother.NpcId,
                 NpcsRegularChildren = GatherTheChildren(NpcToAssign.NpcsRegularChildren),
                 NpcsSerdanEdlosiChildren = GatherTheChildren(NpcToAssign.NpcsSerdanEdlosiChildren)
             };
